@@ -1,10 +1,14 @@
 module.exports = async function (context, req) {
   context.log("JavaScript HTTP trigger function processed a request.");
 
-  return {
+  // Set the Content-Type header to indicate JSON response
+  context.res = {
     status: 200,
-    jsonBody: {
-        key: "returning some dumb data from azure function"
-    }
-};
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: {
+      azurefunction: "returning some dumb data from azure function",
+    },
+  };
 };
