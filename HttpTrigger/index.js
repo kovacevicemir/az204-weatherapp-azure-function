@@ -8,7 +8,7 @@ module.exports = async function (context, req) {
       "Content-Type": "application/json",
     },
     body: {
-      azurefunction: "returning some dumb data from azure function",
+      azurefunction: "returning some dumb data from azure function.",
     },
   };
 };
